@@ -3,8 +3,12 @@
 
 body {
     font-family: ariel;
-    font-size: 15pt;
-    
+    font-size: 15pt;   
+}
+
+table {
+    width: 75%;
+    margin: 0 auto;
 }
  
 
@@ -25,5 +29,4 @@ body {
 button:hover {
     background-color: pink;
     cursor:pointer;
-    
 }
