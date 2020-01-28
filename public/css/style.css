@@ -3,7 +3,7 @@
 
 body {
     font-family: ariel;
-    font-size: 15pt;   
+    font-size: 15pt;
 }
 
 table {
@@ -16,14 +16,19 @@ table {
     font-weight: bold
 }
 
+.button_class{
+    margin: 80px 10px;
+}
+
 
 #burger_section {
     background-color: black;
     color: white;
+    margin: 60px 0 auto;
 }
 
 #delivery_section {
-
+    margin: 50px 10px;
 }
 
 button:hover {
