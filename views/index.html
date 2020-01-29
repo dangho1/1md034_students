@@ -5,60 +5,41 @@
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
+
   <body>
     <header id="header">
       <h1 id="header_text">Welcome to burger town!</h1>
       <img id="header_image" src=https://www.plumbuffets.co.uk/wp-content/uploads/2018/08/burger-header-best.jpg>
-      </header>
+    </header>
+    
       <main>
       <section id="burger_section">
       <h2>Which burger to devour?</h2>
       <p> Please select a burger: </p>
-      <table>
-        <thead>
-          <tr>
-            <th>The Fire Burger</th>
-            <th>The Hej Burger</th>
-            <th>The über burger</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Fire burger information -->
-          <tr class="images">
-            <td>
-      <img id="fire_burger_image" src=https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX4409422.jpg alt="Fire Burger" title="hot hot">
-    </td>
-    <td>
-      <img id="hej_burger_image" src=https://pbs.twimg.com/profile_images/890904165144289284/OTkgAVex_400x400.jpg alt="Happy Happy burger" title="cute cute">
-    </td>
-    <td>
-      <img id="mega_burger_image" src=https://i.pinimg.com/736x/1f/a6/7a/1fa67a99e05e981f6288653102cd40a9.jpg alt="Mega burger" title="big big">
-    </td>
-  </tr>
-	  <tr class="fire_burger">
-	      <td>
-		<ul>
-		  <li> May cause side effects</li>
-		  <li> Not advised to eat on a date</li>
-		</ul>
-	      </td>
-	      <td>
-		<ul>
-		  <li> Will cheer you up on a sad day</li>
-		  <li> Too cute to actually eat</li>
-		  <li> WIll sing you a song on your birthday</li>
-	      </td>
-	      <td>
-		<ul>
-		  <li> Cheat meal godsent</li>
-		  <li> Questionable cheese</li>
-		  <li> May cause anxiety after consumption</li>
-		</ul>
-	      </td>
-	  </tr>
-	</tbody>
-      </table>
+      <div class="burgers">
+	<div class="burger fire"><h3>The Fire Burger</h3><img id="fire_burger_image" src=https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX4409422.jpg alt="Fire Burger" title="hot hot">
+	  <ul>
+	    <li> May cause side effects</li>
+	    <li> Not advised to eat on a date</li>
+	  </ul>
+	</div>
+	<div class="burger hej"><h3>The Hej Burger</h3><img id="hej_burger_image" src=https://pbs.twimg.com/profile_images/890904165144289284/OTkgAVex_400x400.jpg alt="Happy Happy burger" title="cute cute">
+	  <ul>
+	    <li> Will cheer you up on a sad day</li>
+	    <li> Too cute to actually eat</li>
+	    <li> Will sing you a song on your birthday</li>
+	  </ul>
+	</div>
+	<div class="burger uber"><h3>The Ûber Burger</h3><img id="uber_burger_image" src=https://i.pinimg.com/736x/1f/a6/7a/1fa67a99e05e981f6288653102cd40a9.jpg alt="Mega burger" title="big big">
+	  <ul>
+	    <li> Cheat meal godsent</li>
+	    <li> Questionable cheese</li>
+	    <li> May cause anxiety after consumption</li>
+	  </ul>
+	</div>
+      </div>
       </section>
+      
       <br />
       <section id="delivery_section">
 	<h2>Contact information</h2>
