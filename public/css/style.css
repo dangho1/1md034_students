@@ -21,13 +21,22 @@ table {
 }
 
 #fire_burger_image {
-    width: 300px;
+    width: 100%;
     height: auto;
 	       
 }
 
-.images {
+#hej_burger_image {
     width: 100%;
+}
+
+#mega_burger_image {
+    width: 100%;
+
+}
+
+.images {
+    width: 10%;
     height: auto;
 	      
 }
@@ -52,11 +61,19 @@ table {
 
 #header {
     margin: 0px 10px;
+    height: 400px;
+    overflow: hidden;
 }
 
 #header_image {
     opacity: 0.6;
-    width:
+    width: 100%;
+    height: auto;
+	       
+}
+
+#header_text {
+    position: absolute;
 }
 
 button:hover {
