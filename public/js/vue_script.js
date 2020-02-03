@@ -1,6 +1,13 @@
-const vm = new Vue({
-  el: '#myID',
+const fire = new Vue({
+  el: '#fire',
   data: {
-    arbitraryVariableName: 'Välj en burgare'
+    burgerFire: return_fire
+  }
+})
+
+const hej = new Vue({
+  el: '#hej',
+  data: {
+    burgerHej: return_hej
   }
 })

@@ -19,5 +19,5 @@ let void_burger = new menuItem("Imaginary burger", "Seeing is not believing");
 let return_fire = returnItem(fire_burger);
 let return_hej = returnItem(hej_burger);
 
-console.log(return_fire);
-console.log(return_hej);
+document.getElementById("fire").innerHTML = return_fire;
+document.getElementById("hej").innerHTML = return_hej;
