@@ -4,9 +4,9 @@
     <title>Burger Town</title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="js/js_script.js"></script>
-    <script src="js/vue_script.js"></script>
-    <script src="https://vuejs.org/js/vue.js"></script> 
+    <script src="js/js_script.js" defer></script>
+    <script src="js/vue_script.js" defer></script>
+    <script src="https://vuejs.org/js/vue.js" defer></script> 
   </head>
 
   <body>
@@ -19,7 +19,18 @@
       <section id="burger_section">
       <h2>Which burger to devour?</h2>
       <p> Please select a burger: </p>
-      <div class="burgers">
+
+      <!-- -----------------------------JAVASCRIPT---------------------------->
+
+      <div id="burgers" class="burgers_class">
+	
+
+      </div>
+
+
+
+	   <!----------------------------JS END------------------------------> 
+      <!--<div class="burgers">
 	<div class="burger fire"><h3>The Fire Burger</h3><img id="fire_burger_image" src=https://resizeimage.net/mypic/1PfRTlQG2DqqsXgR/UaC5P/spicy_burger.jpg alt="Fire Burger" title="hot hot">
 	  <ul>
 	    <li> May cause side effects</li>
@@ -40,7 +51,7 @@
 	    <li> May cause anxiety after consumption</li>
 	  </ul>
 	</div>
-      </div>
+      </div> -->
       </section>
       
       <br />

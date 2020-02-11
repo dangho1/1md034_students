@@ -1,4 +1,4 @@
-const fire = new Vue({
+/*const fire = new Vue({
   el: '#fire',
   data: {
     burgerFire: return_fire
@@ -20,3 +20,4 @@ const vm = new Vue ({
   copiedMenu: menu
   }
 })
+*/
