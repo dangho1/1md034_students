@@ -18,7 +18,7 @@ let uber_burger = new menuItem("Uber Burger", true, true, 9000, "burger uber", '
 let lettuce_burger = new menuItem("Lettuce Burger", false, false, 230, "burger lettuce", 'https://hips.hearstapps.com/vidthumb/manual_upload/597b9b2dbbddbd58db5aac61/thumb_1501272879.png');
 let void_burger = new menuItem("Void Burger", false, false, 0, "burger void", 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTie9lseRnYgGalOeVShMW88rHYzRulF6aiqFcR7dK2NXwDKnCb');
 
-let return_fire = returnItem(fire_burger);
+/*let return_fire = returnItem(fire_burger);
 let return_hej = returnItem(hej_burger);
 let return_uber = returnItem(uber_burger);
 let return_lettuce = returnItem(lettuce_burger);
@@ -72,66 +72,16 @@ for (var burger of menu) {
     kcalItem.appendChild(kcal);
     burgInfoList.appendChild(kcalItem);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-for (var burger of menu) {
-    let grid_placement = docuent.getElementsByClassName(burger.alias);
-    //burgers.appendChild(grid_placement);
-    let listItem = document.createElement("li");
-    let burger_name = document.createTextNode(burger.name);
-    listItem.appendChild(burger_name);
-    let allergy_list = document.createElement("ul");
-    listItem.appendChild(allergy_list);
-    big_list.appendChild(listItem);
-    
-}
-/
-
-
-let big_list = document.createElement("ul");
 */
-/*burgers.appendChild(big_list);
-for (var burger of menu) {
-    let listItem = document.createElement("li");
-    let burger_name = document.createTextNode(burger.name);
-    listItem.appendChild(burger_name);
-    let allergy_list = document.createElement("ul");
-    listItem.appendChild(allergy_list);
-    big_list.appendChild(listItem);
-    
-    
-    if(burger.has_gluten) {
-  	let gluten_item = document.createElement("li");
-	let gluten_text = document.createTextNode("Contains gluten");
-	gluten_item.appendChild(gluten_text);
-	allergy_list.appendChild(gluten_item);
-    }
-    
-    if(burger.has_lactose) {
-	let lactose_item = (document.createElement("li"));
-	let lactose_text = document.createTextNode("Contains lactose")
-	lactose_item.appendChild(lactose_text);
-	allergy_list.appendChild(lactose_item);
-    }
-    
-    let kcal_item = document.createElement("li");
-    let kcal_text = document.createTextNode("Kcal: " + burger.kcal);
-    kcal_item.appendChild(kcal_text);
-    allergy_list.appendChild(kcal_item);
-    
-  
-}
 
-*/
+
+
+
+
+
+
+
+
+
+
+

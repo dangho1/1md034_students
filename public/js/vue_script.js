@@ -11,7 +11,7 @@ const hej = new Vue({
     burgerHej: return_hej
   }
 })
-
+*/
 let menu = [fire_burger, hej_burger, uber_burger, void_burger, lettuce_burger];
 
 const vm = new Vue ({
@@ -20,4 +20,3 @@ const vm = new Vue ({
   copiedMenu: menu
   }
 })
-*/

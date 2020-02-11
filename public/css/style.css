@@ -70,7 +70,16 @@ button:hover {
     cursor:pointer;
 }
 
+ /* js grid wrapper */
 #burgers {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 600px 600px 600px;
+
+}
+
+/*vue grid wrapper */
+#burgerarr {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 600px 600px 600px;

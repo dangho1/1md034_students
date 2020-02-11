@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/js_script.js" defer></script>
     <script src="js/vue_script.js" defer></script>
-    <script src="https://vuejs.org/js/vue.js" defer></script> 
+    <script src="https://vuejs.org/js/vue.js"></script> 
   </head>
 
   <body>
@@ -22,7 +22,15 @@
 
       <!-- -----------------------------JAVASCRIPT---------------------------->
 
-      <div id="burgers" class="burgers_class">
+      <div id="burgerarr" class="burgers_class">
+	<div v-for="burgers in copiedMenu">
+	  <h3> {{burgers.name}} </h3>
+	  <img v-bind:src="burgers.imagePath" height="480" width="480"> 
+	  <ul>
+	    <li v-if="burgers.has_gluten"> Contains gluten </li>
+	    <li v-if="burgers.has_lactose"> Contains lactose </li>
+	    <li> Kcal: {{burgers.kcal}}</li>
+	  </div>
 	
 
       </div>
