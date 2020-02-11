@@ -12,11 +12,11 @@ const hej = new Vue({
   }
 })
 */
-let menu = [fire_burger, hej_burger, uber_burger, void_burger, lettuce_burger];
+//let menu = [fire_burger, hej_burger, uber_burger, void_burger, lettuce_burger];
 
 const vm = new Vue ({
 	el: '#burgerarr',
   data: {
-  copiedMenu: menu
+  copiedMenu: food
   }
 })
