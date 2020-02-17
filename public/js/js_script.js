@@ -74,14 +74,35 @@ for (var burger of menu) {
 }
 */
 
+function getCheckedGender() {
+    var selected;
+    if(document.getElementById("male_gender").checked) {
+	selected = document.getElementById("male_gender").value;
+    }
+    else if(document.getElementById("female_gender").checked) {
+	selected = document.getElementById("female_gender").value;
+    }
+    else if(document.getElementById("other_gender").checked) {
+	selected = document.getElementById("other_gender").value;
+    }
+    return selected;
+}
+		
+
+let myButton = document.getElementById('button_id');
+myButton.onclick = function() {
+    console.log("button clicked");
+    let nameValue = document.getElementById('fullname').value
+    let emailValue = document.getElementById('email').value;
+    let streetValue = document.getElementById('street').value;
+    let houseValue = document.getElementById('house').value;
+    let paymentValue = document.getElementById('payment').value;
+    let genderValue = getCheckedGender();
+
+    let selected_array = [nameValue, emailValue, streetValue, houseValue, paymentValue, genderValue];
+    return selected_array;
+    console.log(selected_array);
+}
 
 
-
-
-
-
-
-
-
-
-
+let infoarr = ["Name", "Email", "Street", "House", "Payment", "Gender", "Burger Chosen"];

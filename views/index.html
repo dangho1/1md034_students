@@ -12,7 +12,7 @@
 
   <body>
     <header id="header">
-      <h1 id="header_text">Welcome to burger town!</h1>
+      <h1 id="header_text">Welcome to Burger Town!</h1>
       <img id="header_image" src=https://www.plumbuffets.co.uk/wp-content/uploads/2018/08/burger-header-best.jpg>
     </header>
     
@@ -31,6 +31,9 @@
 	    <li v-if="burgers.has_gluten"> Contains gluten </li>
 	    <li v-if="burgers.has_lactose"> Contains lactose </li>
 	    <li> Kcal: {{burgers.kcal}}</li>
+	    </ul>
+	  <input type="checkbox" v-on:change="burgers.checked = true">
+	  
 	  </div>
 	
 
@@ -95,18 +98,22 @@
 	</p>
 	<p>
           <label for="Gender">Gender</label><br>
-          <form action="Gender">
-            <input type="radio" name="gender" value="male"> Male<br>
-            <input type="radio" name="gender" value="female"> Femalde<br>
-            <input type="radio" name="gender" value="Other"> Other<br>
+          <form id="sex" action="Gender">
+            <input type="radio" id="male_gender" name="gender" value="male"> Male<br>
+            <input type="radio" id="female_gender" name="gender" value="female"> Female<br>
+            <input type="radio" id="other_gender" name="gender" value="Other"> Other<br>
           </form>
 	</p>
       </section>
       <section class="button_class">
 	<p>
-          <button type="submit"><img src="https://comps.canstockphoto.com/mascot-food-bagel-burger-illustration-clipart-vector_csp65747754.jpg" width="40"/> Get your burger!</button>
+	  <div id="button_id">
+          <button id="button_id" v-on:click="markDone()" type="submit"><img src="https://comps.canstockphoto.com/mascot-food-bagel-burger-illustration-clipart-vector_csp65747754.jpg" width="40"/> Get your burger</button>
 	</p>
-	</section>
+	<h5 v-if="!isHidden"> Your order information: <br> {{ markDone() }}</h5>
+	</div>
+      </section>
     </body>
     </main>
 </html>
+ 
