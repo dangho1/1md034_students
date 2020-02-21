@@ -27,16 +27,35 @@ const info = new Vue({
     el: '#button_id',
     data: {
 	isHidden: true,
-	infoArray: infoarr,
-	dataArr: []
+	name: '',
+	email: '',
+	street: '',
+	house: '',
+	payment: '',
+	gender: '',
+	info: [],
+	infoDesc: ["Name:", "Email:", "Street: ", "House: ", "Payment: ", "Gender: "]
+	
       },
   
   
     methods: {
 	
-	markDone() {
-	    this.isHidden = false;
-	    let myButton = document.getElementById('button_id');
+	markDone: function() {
+		this.isHidden = false;
+		this.info = [this.name, this.email, this.street, this.house, this.payment, this.gender];
+		console.log(this.info);
+		//return info;
+		return(this.info);
+	}
+}
+  
+    
+   
+});
+
+/*
+ /*let myButton = document.getElementById('button_id');
 	    let fetch = function() {
 		let nameValue = document.getElementById('fullname').value
 		let emailValue = document.getElementById('email').value;
@@ -78,10 +97,5 @@ const info = new Vue({
 	    }
 	    console.log(fetch());
 	    let hej = fetch();
-	    return hej;
-	}
-    }
-  
-    
-   
-});
+		return hej;
+		*/

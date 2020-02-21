@@ -67,29 +67,32 @@
       </section>
       
       <br />
+      <div id="button_id">
       <section id="delivery_section">
 	<h2>Contact information</h2>
 	<p> This is where you provide neccessary information </p> <br />
-	<h3>Delivery information</h3>
-	<p>
+  <h3>Delivery information</h3>
+
+  
+  <form>
+  
           <label for="fullname">Full name</label><br>
-          <input type="text" id="fullname" name="fn" required="required" placeholder="First and last name" />
-	</p>
+          <input v-model="name" type="text" id="fullname" name="fn" required="required" placeholder="First and last name" />
 	<p>
           <label for="email">E-mail</label><br>
-          <input type="text" id="email" name="mail" required="required" placeholder="E-mail address"
+          <input v-model="email" type="text" id="email" name="mail" required="required" placeholder="E-mail address" />
 		 </p>
 	<p>
           <label for="Street">Street</label><br>
-          <input type="text" id="street" name="str" required="required" placeholder="Street name"
+          <input v-model="street" type="text" id="street" name="str" required="required" placeholder="Street name" />
 		 </p>
 	<p>
           <label for="House">House</label><br>
-          <input type="number" id="house" name="haus" required="required" placeholder="House number"
+          <input v-model="house" type="number" id="house" name="haus" required="required" placeholder="House number" />
 		 </p>
 	<p>
           <label for="payment">Payment Methods</label><br>
-          <select id="payment" name="pay">
+          <select v-model="payment" id="payment" name="pay">
             <option selected="selected">Visa</option>
             <option>MasterCard</option>
             <option>Cash</option>
@@ -99,21 +102,27 @@
 	<p>
           <label for="Gender">Gender</label><br>
           <form id="sex" action="Gender">
-            <input type="radio" id="male_gender" name="gender" value="male"> Male<br>
-            <input type="radio" id="female_gender" name="gender" value="female"> Female<br>
-            <input type="radio" id="other_gender" name="gender" value="Other"> Other<br>
+            <input v-model="gender" type="radio" id="male_gender" name="gender" value="male"> Male<br>
+            <input v-model="gender" type="radio" id="female_gender" name="gender" value="female"> Female<br>
+            <input v-model="gender" type="radio" id="other_gender" name="gender" value="Other"> Other<br>
           </form>
-	</p>
-      </section>
-      <section class="button_class">
+  </p>
+</form>
+
 	<p>
-	  <div id="button_id">
-          <button id="button_id" v-on:click="markDone()" type="submit"><img src="https://comps.canstockphoto.com/mascot-food-bagel-burger-illustration-clipart-vector_csp65747754.jpg" width="40"/> Get your burger</button>
-	</p>
-	<h5 v-if="!isHidden"> Your order information: <br> {{ markDone() }}</h5>
-	</div>
+    </section>
+          <button class="button_class" v-on:click="markDone()" type="submit"><img src="https://comps.canstockphoto.com/mascot-food-bagel-burger-illustration-clipart-vector_csp65747754.jpg" width="40"/> Get your burger</button>
+  </p>
+  <div v-if="!isHidden">
+    <h5>Your order information: </h5>
+    <div v-for="(desc, index) in infoDesc">
+      <span>{{desc}}</span>
+      <span v-if="info[index]"> {{info[index]}}</span>
+
+    </div>
+  </div>
+</div>
       </section>
     </body>
-    </main>
 </html>
  
