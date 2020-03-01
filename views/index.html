@@ -4,6 +4,7 @@
     <title>Burger Town</title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="/socket.io/socket.io.js" defer></script>
     <script type="text/javascript" src="js/menu.js"></script>
     <script src="js/js_script.js" defer></script>
     <script src="js/vue_script.js" defer></script>
@@ -36,8 +37,9 @@
       </section>
       
       <br />
-      <div id="button_id">
+      
       <section id="delivery_section">
+          <div id="button_id"> 
 	<h2>Contact information</h2>
 	<p> This is where you provide neccessary information </p> <br />
   <h3>Delivery information</h3>
@@ -50,14 +52,6 @@
 	<p>
           <label for="email">E-mail</label><br>
           <input v-model="email" type="text" id="email" name="mail" required="required" placeholder="E-mail address" />
-		 </p>
-	<p>
-          <label for="Street">Street</label><br>
-          <input v-model="street" type="text" id="street" name="str" required="required" placeholder="Street name" />
-		 </p>
-	<p>
-          <label for="House">House</label><br>
-          <input v-model="house" type="number" id="house" name="haus" required="required" placeholder="House number" />
 		 </p>
 	<p>
           <label for="payment">Payment Methods</label><br>
@@ -77,20 +71,32 @@
           </form>
   </p>
 </form>
+</div>
+  <h3> Where should the burger be delivered to? </h3>
+<div class="view-box">
+    <div id="dots" v-on:click="addOrder">
+        <div 
+          v-for="(order, key) in orders"
+          v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+          {{key}}
+        </div>
+    </div>
+</div>
 
+</div>
 	<p>
     </section>
-          <button class="button_class" v-on:click="markDone()" type="submit"><img src="https://comps.canstockphoto.com/mascot-food-bagel-burger-illustration-clipart-vector_csp65747754.jpg" width="40"/> Get your burger</button>
+    <div id="order_button">
+          <button class="button_class" id="order_button" v-on:click="finishOrder()" type="submit"><img src="https://comps.canstockphoto.com/mascot-food-bagel-burger-illustration-clipart-vector_csp65747754.jpg" width="40"/> Get your burger</button>
   </p>
-  <div v-if="!isHidden">
+  <div id="order_button" v-if="!hidden">
     <h5>Your order information: </h5>
-    <div v-for="(desc, index) in infoDesc">
+    <div v-for="(desc, index) in customer_info">
       <span>{{desc}}</span>
-      <span v-if="info[index]"> {{info[index]}}</span>
-
+      <span v-if="order[index]"> {{order[index]}}</span>
+      </div>
     </div>
   </div>
-</div>
       </section>
     </body>
 </html>
