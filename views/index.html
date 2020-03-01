@@ -21,8 +21,6 @@
       <h2>Which burger to devour?</h2>
       <p> Please select a burger: </p>
 
-      <!-- -----------------------------JAVASCRIPT---------------------------->
-
       <div id="burgerarr" class="burgers_class">
 	<div v-for="burgers in copiedMenu">
 	  <h3> {{burgers.name}} </h3>
@@ -30,40 +28,11 @@
 	  <ul>
 	    <li v-if="burgers.has_gluten"> Contains gluten </li>
 	    <li v-if="burgers.has_lactose"> Contains lactose </li>
-	    <li> Kcal: {{burgers.kcal}}</li>
-	    </ul>
-	  <input type="checkbox" v-on:change="burgers.checked = true">
-	  
+      <li> Kcal: {{burgers.kcal}}</li>
+      <li><input type="checkbox" v-on:click="addInfo(burgers.name)" ></li>
+	    </ul>	  
 	  </div>
-	
-
       </div>
-
-
-
-	   <!----------------------------JS END------------------------------> 
-      <!--<div class="burgers">
-	<div class="burger fire"><h3>The Fire Burger</h3><img id="fire_burger_image" src=https://resizeimage.net/mypic/1PfRTlQG2DqqsXgR/UaC5P/spicy_burger.jpg alt="Fire Burger" title="hot hot">
-	  <ul>
-	    <li> May cause side effects</li>
-	    <li> Not advised to eat on a date</li>
-	  </ul>
-	</div>
-	<div class="burger hej"><h3>The Hej Burger</h3><img id="hej_burger_image" src=https://resizeimage.net/mypic/rijg5MLC7kvVFLpw/B5lzX/hej_burger.jpg alt="Happy Happy burger" title="cute cute">
-	  <ul>
-	    <li> Will cheer you up on a sad day</li>
-	    <li> Too cute to actually eat</li>
-	    <li> Will sing you a song on your birthday</li>
-	  </ul>
-	</div>
-	<div class="burger uber"><h3>The Ûber Burger</h3><img id="uber_burger_image" src=https://resizeimage.net/mypic/t0bXi85mpNiKM34W/DyehO/uber_burger.jpg alt="Mega burger" title="big big">
-	  <ul>
-	    <li> Cheat meal godsent</li>
-	    <li> Questionable cheese</li>
-	    <li> May cause anxiety after consumption</li>
-	  </ul>
-	</div>
-      </div> -->
       </section>
       
       <br />
